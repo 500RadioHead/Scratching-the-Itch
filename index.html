@@ -1,18 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.2/lib/p5.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
-    
-    
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta name="google-site-verification" content="Wy_8XrJ5-ZHDBio7jm56nSd7K7cvttNfYi8913X5Zzk"/>
+
     <meta charset="utf-8" />
 
+    <title>Scratching the Itch</title>
+
+    <meta name="description" content="Scratching the Itch is an interactive digital piece involving self-harm, cutting, blood, bodily sensation, catharsis and safety">
+
+    <meta name="keywords" content="Scratching the Itch, self-harm, cutting, blood, interactive artwork, body">
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.2/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
   </head>
+
   <body>
+
+    <div id="intro">
+      <div id="intro-content">
+
+        <h1>HEAVY TRIGGER WARNING</h1>
+
+        <p>
+          Cutting, blood (unless you choose to turn it off), visceral skin layers,
+          self harm.
+        </p>
+
+        <p>
+          I'm Erebschl. I made this website for me to use as a coping mechanism
+          instead of self harm, and I figured, if it helps me, maybe it'll help others!
+        </p>
+
+        <p>
+          If you feel like you would be triggered by this, close the tab. I mean it!
+        </p>
+
+        <h2>Coping Mechanisms</h2>
+
+        <p>
+          Squeeze a stress ball, tear or scrunch paper, draw on your skin with
+          washable marker, listen to loud music, go for a fast walk, use a fidget
+          toy, call somebody.
+        </p>
+
+        <p>
+          Find a Helpline:
+          <a href="https://findahelpline.com" target="_blank">
+            findahelpline.com
+          </a>
+        </p>
+
+        <p>
+          Inspired by Fatal to the Flesh by Rafaël Rozendaal.
+        </p>
+
+        <div id="buttons">
+          <button id="enter-button">CLICK HERE TO ENTER</button>
+          <button id="leave-button">CLICK HERE TO LEAVE</button>
+        </div>
+
+      </div>
+    </div>
+
     <main>
     </main>
+
     <script src="sketch.js"></script>
+
+    <script>
+      document.getElementById("enter-button").onclick = function() {
+        document.getElementById("intro").style.display = "none";
+      };
+
+      document.getElementById("leave-button").onclick = function() {
+        window.location.href = "https://www.google.com";
+      };
+    </script>
+
+    <script data-goatcounter="https://erebschl.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
   </body>
 </html>
