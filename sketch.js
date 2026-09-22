@@ -854,15 +854,6 @@ function makeZoomControls() {
   resetBtn.style('background', '#fff');
   resetBtn.mousePressed(resetView);
 
-  const hint = createSpan('let me know if this works');
-  hint.parent(row);
-  hint.position(272, 9);
-  hint.style('font-family', 'sans-serif');
-  hint.style('font-size', '11px');
-  hint.style('color', '#444');
-  hint.style('background', 'rgba(255,255,255,0.7)');
-  hint.style('padding', '2px 6px');
-  hint.style('border-radius', '4px');
 }
 
 function updateZoomLabel() {
