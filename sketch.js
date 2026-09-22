@@ -63,7 +63,7 @@ const layers = [
   { depth: 0,   colour: [250, 218, 190] }, // 0 epidermis
   { depth: 40,  colour: [240, 230, 200] }, // 1 upper dermis
   { depth: 110, colour: [214, 92, 104]  }, // 2 lower dermis
-  { depth: 190, colour: [255, 232, 150] }, // 3 subcetanoeus fat
+  { depth: 190, colour: [255, 232, 150] }, // 3 fat
   { depth: 330, colour: [246, 236, 236] }, // 4 fascia
   { depth: 350, colour: [176, 38, 52]   }, // 5 muscle
   { depth: 500, colour: [104, 20, 38]   }  // 6 deep tissue
@@ -306,7 +306,7 @@ function draw() {
 }
 
 
-// multiple fingiess 
+// multiple fingers
 
 
 function beginStroke(id, x, y) {
@@ -319,8 +319,6 @@ function beginStroke(id, x, y) {
   });
 }
 
-// Every currently-pressed pointer for the cut tool: all active touches,
-// or the mouse if no touches are down.
 function collectPointers() {
   const pts = [];
   if (isPinching) return pts; // two fingers down = zooming, not cutting
@@ -369,8 +367,6 @@ function updateStrokes() {
   }
 }
 
-
-// cuttingggg
 
 
 function sstep(t) {
@@ -477,7 +473,6 @@ function stamp(cx, cy, rad, strength) {
 
 // tissue texture n shading
 
-
 function layerIndex(d) {
   for (let k = layers.length - 1; k >= 0; k--) {
     if (d >= layers[k].depth) return k;
@@ -574,7 +569,7 @@ function bleedLine(s, x, y, d) {
   s.lbOn = true;
 }
 
-// FAT (yellow from the subcetanoeus layer i feel like im spelling that wrong?)
+// fat
 function updateFat() {
   const now = millis();
 
@@ -717,7 +712,7 @@ function updateDrips() {
   }
 }
 
-// PRESSURE SLIDER
+// pressure
 
 function makePressureSlider() {
   const row = createDiv('');
@@ -921,7 +916,7 @@ function mouseWheel(event) {
   return false;
 }
 
-// pinch-to-zoom / two-finger pan
+// pinch-to-zoom
 function beginPinch(event) {
   isPinching = true;
   dragging = false;
@@ -956,7 +951,7 @@ function updatePinch(event) {
   applyTransform();
 }
 
-// TOOLS: CUT / WIPE / HEAL + WIPE ALL / HEAL ALL
+// tools
 
 function makeToolButtons() {
   const names = ['cut', 'wipe', 'heal'];
@@ -1165,7 +1160,7 @@ function drawToolCursor() {
   noStroke();
 }
 
-// INPUT
+// input
 
 function mousePressed(event) {
   const onCanvas = event && event.target === canvasEl;
